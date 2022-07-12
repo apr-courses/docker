@@ -1,25 +1,17 @@
-# Docker
+# Docker-Compose for the PHP project
 
-## Install [Docker Desktop](https://www.docker.com/get-started/) based on your OS.
-
-## Run docker getting-started image
+You should have Docker Desktop installed before starting it.
+## Run docker-compose from project root folder
 ```bash
-docker run -d -p 80:80 docker/getting-started
+docker-compose up
 ```
 
-Open [localhost:80](http://localhost:80) in your browser.
+Open [localhost:4010](http://localhost:4010) in your browser to see the "hello world"
 
-## Change the docker port
+## Change the application port
+Stop docker;
+Open docker-compose.yaml, change the port 4010 to 8000 (or set your value)
 ```bash
-docker run -d -p 8080:80 docker/getting-started
+docker-compose up
 ```
-
-Open [localhost:8080](http://localhost:8080) in your browser.
-
-## Stop and remove the container
-```bash
-docker ps  // (see the list of containers and their ID)
-docker stop containerID // (check the website in browser)
-docker kill container ID
-docker ps // (the container should be removed)
-```
+Check your app at the new port.
